@@ -5,8 +5,7 @@ import Header from "../components/Header";
 import useApis from "../hooks/use-apis";
 
 const IndexPage: FC = () => {
-  const { qiitaPosts, isLoading } = useApis();
-  console.log(qiitaPosts);
+  const { qiitaPosts, notePosts, isLoading } = useApis();
 
   return (
     <div className="container">
