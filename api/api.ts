@@ -1,6 +1,5 @@
 const QIITAAPIKEY = process.env.QIITA_API_KEY;
 
-//TODO: note,
 //TODO: medium,
 //TODO: Twitter
 
