@@ -1,7 +1,8 @@
 import Link from "next/link";
 import type { FC } from "react";
 
-import Header from "../components/Header";
+import { Header, PostList } from "../components";
+
 import useApis from "../hooks/use-apis";
 
 const IndexPage: FC = () => {
@@ -10,6 +11,7 @@ const IndexPage: FC = () => {
   return (
     <div className="container">
       <Header />
+      <PostList posts={notePosts} someType={"note"} />
     </div>
   );
 };

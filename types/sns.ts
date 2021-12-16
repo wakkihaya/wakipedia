@@ -1,14 +1,8 @@
-export type QiitaType = {
-  title: string;
-  url: string;
-  likesCount: number;
-  updatedAt: string;
-};
 
-export type NoteType = {
+export type PostType = {
   title: string;
   url: string;
-  ogImage: string;
+  ogImage?: string;
   likesCount: number;
   updatedAt: string;
 };
