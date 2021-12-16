@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { getMyQiitaPosts } from "../api/api";
+import { getMyQiitaPosts, getMyNotePosts } from "../api/api";
 import { QiitaType } from "../types/sns";
 
 const useApis = () => {
