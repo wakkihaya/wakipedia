@@ -1,0 +1,13 @@
+@import "./variables";
+
+.container {
+  width: $content-width;
+  margin: auto;
+  height: 100vh;
+}
+
+.header {
+  width: 100%;
+  font-size: $large-font-size;
+  text-align: center;
+}

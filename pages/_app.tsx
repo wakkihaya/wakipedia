@@ -1,4 +1,6 @@
-import "../assets/styles/main.scss";
+import "../assets/styles/app.scss";
+import "../assets/styles/styles.scss";
+
 import React from "react";
 import { AppProps } from "next/app";
 

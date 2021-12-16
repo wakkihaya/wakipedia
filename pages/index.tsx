@@ -1,15 +1,12 @@
 import Link from "next/link";
 import type { FC } from "react";
 
+import Header from "../components/Header";
+
 const IndexPage: FC = () => (
-  <>
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">
-        <a>About</a>
-      </Link>
-    </p>
-  </>
+  <div className="container">
+    <Header />
+  </div>
 );
 
 export default IndexPage;
