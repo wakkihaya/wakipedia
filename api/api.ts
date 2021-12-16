@@ -32,10 +32,10 @@ export const getMyNotePosts = async () => {
 
   try {
     const res = await fetch(
-      `${NOTE_ENDPOINT_URL}wakki/contents_kind=note&page=1`
+      `${NOTE_ENDPOINT_URL}wakkihaya/contents?kind=note&page=1`
     );
     const result = await res.json();
-    return result;
+    return result.data.contents;
   } catch (error) {
     console.error(error);
     return null;
