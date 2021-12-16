@@ -1,0 +1,22 @@
+@import "./variables";
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, $notoSansJP-font-family, BlinkMacSystemFont,
+    Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans,
+    Helvetica Neue, sans-serif;
+}
+html {
+  background-color: white;
+  font-size: 62.5%;
+  color: $text-base-color;
+}
+
+body {
+  min-width: $content-width;
+  @media screen and (max-width: $mobile-width) {
+    min-width: initial;
+  }
+}
