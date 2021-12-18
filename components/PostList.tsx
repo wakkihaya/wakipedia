@@ -8,7 +8,7 @@ type PostListProps = {
 
 const PostView: FC<{ post: PostType }> = ({ post }) => {
   return (
-    <a href={post.url} target="_blank">
+    <a href={post.url} target="_blank" className="post-item__atag">
       <div className="post-item">
         <div className="post-item--image">
           <img src={post.ogImage} />
