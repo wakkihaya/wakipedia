@@ -1,8 +1,7 @@
-
 export type PostType = {
   title: string;
   url: string;
   ogImage?: string;
-  likesCount: number;
+  likesCount?: number;
   updatedAt: string;
 };
