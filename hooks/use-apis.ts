@@ -20,6 +20,8 @@ const useApis = () => {
           url: item.url,
           likesCount: item.likes_count,
           updatedAt: item.updated_at,
+          ogImage:
+            "https://cdn.qiita.com/assets/qiita-ogp-3b6fcfdd74755a85107071ffc3155898.png",
         } as PostType;
       });
       setQiitaPosts(filteredQiitaPosts);
@@ -32,7 +34,7 @@ const useApis = () => {
           title: item.name,
           ogImage: item.eyecatch,
           likesCount: item.likeCount,
-          url: item.noteRrl,
+          url: item.noteUrl,
           updatedAt: item.publishAt,
         } as PostType;
       });

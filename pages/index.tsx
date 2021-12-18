@@ -12,6 +12,7 @@ const IndexPage: FC = () => {
     <div className="container">
       <Header />
       <PostList posts={notePosts} someType={"note"} />
+      <PostList posts={qiitaPosts} someType={"Qiita"} />
     </div>
   );
 };
