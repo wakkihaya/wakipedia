@@ -10,12 +10,14 @@ const PostView: FC<{ post: PostType }> = ({ post }) => {
   return (
     <a href={post.url} target="_blank">
       <div className="post-item">
-        <img src={post.ogImage} className="post-item--image" />
+        <div className="post-item--image">
+          <img src={post.ogImage} />
+        </div>
         <div className="post-item--detail">
           <div className="post-item--detail-title">{post.title}</div>
           <div className="post-item--detail-number">
             <div className="post-item--detail-number-likes">
-              {post.likesCount}
+              {post.likesCount} Likes
             </div>
             <div className="post-item--detail-number-date">
               {post.updatedAt}
