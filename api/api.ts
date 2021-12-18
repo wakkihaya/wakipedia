@@ -40,3 +40,16 @@ export const getMyNotePosts = async () => {
     return null;
   }
 };
+
+export const getMyMediumPosts = async () => {
+  const MEDIUM_ENDPOINT_URL = "https://medium.com/feed/";
+  const { parse } = require("rss-to-json");
+
+  try {
+    const res = await parse(`${MEDIUM_ENDPOINT_URL}@wakkihaya`);
+    return res.items;
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+};

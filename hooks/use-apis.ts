@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 
-import { getMyQiitaPosts, getMyNotePosts } from "../api/api";
+import { getMyQiitaPosts, getMyNotePosts, getMyMediumPosts } from "../api/api";
 import { PostType } from "../types/sns";
 
 const useApis = () => {
   const [qiitaPosts, setQiitaPosts] = useState<PostType[]>([]);
   const [notePosts, setNotePosts] = useState<PostType[]>([]);
+  const [mediumPosts, setMediumPosts] = useState<PostType[]>([]);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
@@ -39,11 +40,26 @@ const useApis = () => {
         } as PostType;
       });
       setNotePosts(filteredNotePosts);
+
+      //Medium
+      const mediumResult = await getMyMediumPosts();
+      if (!mediumResult) return;
+      const filteredMediumPosts: PostType[] = mediumResult.map((item: any) => {
+        return {
+          title: item.title,
+          ogImage:
+            "https://lever-client-logos.s3.us-west-2.amazonaws.com/762fd4bd-7d50-4ac3-80d3-bad44702bf87-1604363697348.png",
+          url: item.link,
+          updatedAt: item.created,
+        } as PostType;
+      });
+      setMediumPosts(filteredMediumPosts);
+
       setIsLoading(false);
     };
     processFetchApis();
   }, []);
-  return { qiitaPosts, notePosts, isLoading };
+  return { qiitaPosts, notePosts, mediumPosts, isLoading };
 };
 
 export default useApis;

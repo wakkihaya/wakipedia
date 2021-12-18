@@ -16,9 +16,11 @@ const PostView: FC<{ post: PostType }> = ({ post }) => {
         <div className="post-item--detail">
           <div className="post-item--detail-title">{post.title}</div>
           <div className="post-item--detail-number">
-            <div className="post-item--detail-number-likes">
-              {post.likesCount} Likes
-            </div>
+            {post.likesCount && (
+              <div className="post-item--detail-number-likes">
+                {post.likesCount} Likes
+              </div>
+            )}
             <div className="post-item--detail-number-date">
               {post.updatedAt}
             </div>
