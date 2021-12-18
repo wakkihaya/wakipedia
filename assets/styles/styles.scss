@@ -4,6 +4,15 @@
   width: $content-width;
   margin: auto;
   min-height: 100vh;
+
+  &--intro {
+    margin: 2em auto;
+    text-align: center;
+    font-size: $small-font-size;
+    a {
+      color: $text-base-color;
+    }
+  }
 }
 
 .header {
